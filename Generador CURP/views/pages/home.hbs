@@ -1,0 +1,161 @@
+<div class="container" style="border-radius: 3%;background-color: rgb(59, 163, 233);">
+<h2  class="text-center" style="color: white; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Si ya lleno el formulario previamente, ingresa su Nombre para buscarla en la base de datos</h2>                    
+<form action='/tablaBD/productName' method="POST">
+    <table class="table">
+    <thead>
+        <tr>     
+        <th>
+           <input name="nombreB" placeholder="Ingrese su Nombre..." class="form-control" style="text-transform:uppercase;">
+           <div class="col-md-12 text-center">
+           <button type="submit" class=" btn-primary btn-lg " style="color: white; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Buscar</button>
+            </div>
+        </th>        
+        </tr>
+    </thead>
+    </table>
+</form>
+<link rel="stylesheet" href="/public/css/styles.css">
+
+    <div class="row">  <!--se crea la pagina principal de la practicac que es donde se 
+                            declararan las variables para la generacion del curp-->
+        <div class="col-md-12">
+            <div class="well well-sm">
+                <form  class="form-horizontal" method="POST" >
+                    <fieldset>
+                        <h1  class="text-center" style="color: white; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Si no te has registrado</h1>
+                        <p style="text-align: center; color: white; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" >Llena el formulario correctamente para generar su CURP</p>  
+
+                                <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>
+                                <label  style="color: white; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Nombre Completo</label>
+                                <input style="text-transform:uppercase" name="nombre" type="text" placeholder="Nombre(s)" class="form-control" required><br>
+                            
+                                <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>
+                                <label style="color: white; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Apellido Paterno</label>
+                                <input style="text-transform:uppercase" name="apellidop" type="text" placeholder="Apellido Paterno" class="form-control"required><br>
+                            
+
+                                <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>
+                                <label style="color: white; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Apellido Materno</label>
+                                <input style="text-transform:uppercase"  name="apellidom" type="text" placeholder="Apellido Materno" class="form-control" ><br>
+                         
+                        
+                                <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>
+                                <label style="color: white; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Dia de Nacimiento</label>
+                                <select name="d" class="form-control" required>
+                                <option value="" disabled="" selected="">Seleccione el dia</option>
+                                <option value="01">01</option>
+                                <option value="02">02</option>
+                                <option value="03">03</option>
+                                <option value="04">04</option>
+                                <option value="05">05</option>
+                                <option value="06">06</option>
+                                <option value="07">07</option>
+                                <option value="08">08</option>
+                                <option value="09">09</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+                                <option value="16">16</option>
+                                <option value="17">17</option>
+                                <option value="18">18</option>
+                                <option value="19">19</option>
+                                <option value="20">20</option>
+                                <option value="21">21</option>
+                                <option value="22">22</option>
+                                <option value="23">23</option>
+                                <option value="24">24</option>
+                                <option value="25">25</option>
+                                <option value="26">26</option>
+                                <option value="27">27</option>
+                                <option value="28">28</option>
+                                <option value="29">29</option>
+                                <option value="30">30</option>
+                                <option value="31">31</option>
+                                </select><br>
+                           
+                        
+                                <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>
+                                <label style="color: white; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Mes de Nacimiento</label>
+                                <select name="m" class="form-control" required>
+                                <option value="" disabled="" selected="">Seleccione el mes</option>
+                                <option value="01">Enero</option>
+                                <option value="02">Febrero</option>
+                                <option value="03">Marzo</option>
+                                <option value="04">Abril</option>
+                                <option value="05">Mayo</option>
+                                <option value="06">Junio</option>
+                                <option value="07">Julio</option>
+                                <option value="08">Agosto</option>
+                                <option value="09">Septiembre</option>
+                                <option value="10">Octubre</option>
+                                <option value="11">Noviembre</option>
+                                <option value="12">Diciembre</option>
+                                </select><br>
+                             
+
+                                <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>
+                                <label style="color: white; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Año de Nacimiento</label>
+                                <input name="a" placeholder="Año" class="form-control" min="1800" maxlength="4" required><br>
+                          
+
+                                <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>
+                                <label style="color: white; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Estado de Nacimiento</label>
+                                <select name="nac" class="form-control" required>
+                                    <option value="" disabled="" selected="">Selecciones Estado de Nacimiento</option>
+                                    <option value="0">Aguascalientes</option>
+                                    <option value="1">Baja California</option>
+                                    <option value="2">Baja California sur</option>
+                                    <option value="3">Campeche</option>
+                                    <option value="4">Chiapas</option>
+                                    <option value="5">Chihuahua</option>
+                                    <option value="6">Ciudad de Mexico(D.F.)</option>
+                                    <option value="7">Coahuila</option>
+                                    <option value="8">Colima</option>                                    
+                                    <option value="9">Durango</option>
+                                    <option value="10">Estado de Mexico</option>
+                                    <option value="11">Guanajuato</option>
+                                    <option value="12">Guerrero</option>
+                                    <option value="13">Hidalgo</option>
+                                    <option value="14">Jalisco</option>
+                                    <option value="15">Michoacan</option>                                    
+                                    <option value="16">Morelos</option>
+                                    <option value="17">Nayarit</option>
+                                    <option value="18">Nuevo Leon</option>
+                                    <option value="19">Oaxaca</option>
+                                    <option value="20">Puebla</option>
+                                    <option value="21">Queretaro</option>
+                                    <option value="22">Quintana Roo</option>
+                                    <option value="23">San Luis Potosi</option>
+                                    <option value="24">Sinaloa</option>
+                                    <option value="25">Sonora</option>
+                                    <option value="26">Tabasco</option>
+                                    <option value="27">Tamaulipas</option>
+                                    <option value="28">Tlaxcala</option>
+                                    <option value="29">Veracruz</option>
+                                    <option value="30">Yucatan</option>
+                                    <option value="31">Zacatecas</option>                                      
+                                </select><br>
+                          
+
+                       
+                                <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>
+                                <label style="color: white; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Genero</label>
+                                <select name="genero" class="form-control"  required>
+                                <option value="" disabled="" selected="">Seleccione su Genero</option>
+                                <option value="H">Hombre</option>
+                                <option value="M">Mujer</option>                                
+                                </select><br>
+                         
+                                <div class="col-md-12 text-center">
+                                <button type="submit" class=" btn-primary btn-lg " style="color: white; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Generar CURP</button>     
+                                </div>                           
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+</form>
+</div>

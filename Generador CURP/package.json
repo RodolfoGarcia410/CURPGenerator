@@ -1,0 +1,28 @@
+{
+  "name": "proyecto-api-rest",
+  "version": "1.0.0",
+  "description": "express y mongo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "author": "Rodolfo Garcia",
+  "license": "ISC",
+  "dependencies": {
+    "@handlebars/allow-prototype-access": "^1.0.3",
+    "blob-stream": "^0.1.3",
+    "body-parser": "^1.19.0",
+    "ejs": "^3.1.3",
+    "express": "^4.17.1",
+    "express-ejs-layouts": "^2.5.0",
+    "express-handlebars": "^4.0.3",
+    "handlebars": "^4.7.7",
+    "html-pdf": "^3.0.1",
+    "iframe": "^1.0.0",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.12.12",
+    "nodemon": "^2.0.3",
+    "pdfkit": "^0.11.0"
+  }
+}
