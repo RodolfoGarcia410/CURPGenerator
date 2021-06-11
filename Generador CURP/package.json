@@ -20,6 +20,7 @@
     "handlebars": "^4.7.7",
     "html-pdf": "^3.0.1",
     "iframe": "^1.0.0",
+    "jinja2": "0.0.1",
     "method-override": "^3.0.0",
     "mongoose": "^5.12.12",
     "nodemon": "^2.0.3",

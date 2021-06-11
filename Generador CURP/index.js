@@ -11,6 +11,8 @@ const {allowInsecurePrototypeAccess} = require('@handlebars/allow-prototype-acce
 const app= express()
 const Product = require('./models/product')
 
+
+
 app.use(bodyParser.urlencoded({extended : false}));
 app.use(bodyParser.json())
 app.engine('.hbs', hbs({
@@ -26,6 +28,7 @@ app.use('/static', express.static('public'))
 app.get('/', (req, res) =>{
     res.render('pages/home')
 });
+
 
 app.get('/contact', (req,res) =>{
     res.render('pages/contact')
@@ -180,8 +183,8 @@ function homoclave( str ) //en esta funcion se hace una funcion fr para mandar
     console.log(req.body)
     let product = new Product()
     product.nombre = nom
-    product.apellidoP = apep
-    product.apellidoM = apem
+    product.apellidoP= apep
+    product.apellidoM= apem
     product.dia = dia
     product.mes = mes
     product.a = año
@@ -222,23 +225,21 @@ app.listen(config.port,() =>{
 })
 
 function getProductbyName(req,res){  
-    let nom = req.body.nombreB  
-    Product.find({nombre: nom},(err, productStored) => {
-        
+    let nom = req.body.nombreB
+	let apep = req.body.apellidopB
+	let apem = req.body.apellidomB  
+    Product.find(({nombre: nom},{apelidoP: apep},{apellidoM: apem}),(err, productStored) => {
         if(err) return res.status(500).send({message: `Error al realizar la peticion${err}` })
         if(!productStored) return res.status(404).send({message:`No existen productos`})
-    //res.status(200).send( {product})
     res.render('pages/result',{productStored})
     
 })
 
 }
 function getProducts(req,res) {
-    
     Product.find({}, (err, productStored )=>{
         if(err) return res.status(500).send({message: `Error al realizar la peticion${err}` })
         if(!productStored) return res.status(404).send({message:`No existen productos`})
-    
     res.render('pages/result',{productStored})
     })
 }

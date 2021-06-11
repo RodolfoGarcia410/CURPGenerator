@@ -1,3 +1,6 @@
+<head>
+    <title>Genera tu CURP</title>
+</head>
 <div class="container" style="border-radius: 3%;background-color: rgb(59, 163, 233);">
 <h2  class="text-center" style="color: white; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Si ya lleno el formulario previamente, ingresa su Nombre para buscarla en la base de datos</h2>                    
 <form action='/tablaBD/productName' method="POST">
@@ -5,8 +8,19 @@
     <thead>
         <tr>     
         <th>
-           <input name="nombreB" placeholder="Ingrese su Nombre..." class="form-control" style="text-transform:uppercase;">
-           <div class="col-md-12 text-center">
+                                <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>
+                                <label  style="color: white; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Nombre Completo</label>
+                                <input style="text-transform:uppercase" name="nombreB" type="text" placeholder="Nombre(s)" class="form-control" required><br>
+                            
+                                <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>
+                                <label style="color: white; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Apellido Paterno</label>
+                                <input style="text-transform:uppercase" name="apellidopB" type="text" placeholder="Apellido Paterno" class="form-control"required><br>
+                            
+
+                                <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>
+                                <label style="color: white; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Apellido Materno</label>
+                                <input style="text-transform:uppercase"  name="apellidomB" type="text" placeholder="Apellido Materno" class="form-control" ><br>
+                                    <div class="col-md-12 text-center">
            <button type="submit" class=" btn-primary btn-lg " style="color: white; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Buscar</button>
             </div>
         </th>        
